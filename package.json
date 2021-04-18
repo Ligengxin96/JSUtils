@@ -1,0 +1,27 @@
+{
+  "name": "jsutils",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "mocha": "^8.3.2"
+  },
+  "description": "JS Util functions",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ligengxin96/JSUtils.git"
+  },
+  "author": "Ligengxin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ligengxin96/JSUtils/issues"
+  },
+  "homepage": "https://github.com/Ligengxin96/JSUtils#readme"
+}
