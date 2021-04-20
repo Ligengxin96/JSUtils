@@ -38,22 +38,22 @@ describe('test-arrayUtils', function() {
   });
 
   describe("test 'deepFlatten' function", function() {
-    it('should return [1, 2, 3]', function() {
+    it('should return itself when parameter is 1d array', function() {
       const result = arrayUtils.deepFlatten([1, 2, 3]);
       assert.deepStrictEqual(result,  [1, 2, 3]);
     });
 
-    it('should return [1, 2, 3, 4]', function() {
+    it(`should return [1, 2, 3, 4] when parameter is '[1, [2], [3, 4]]'`, function() {
       const result = arrayUtils.deepFlatten([1, [2], [3, 4]]);
       assert.deepStrictEqual(result, [1, 2, 3, 4]);
     });
 
-    it('should return [1, 2, 3, 4, 5, 6]', function() {
+    it(`should return '[1, 2, 3, 4, 5, 6]' when parameter is '[1, [2, [3]], [4], [5], 6]'`, function() {
       const result = arrayUtils.deepFlatten([1, [2, [3]], [4], [5], 6]);
       assert.deepStrictEqual(result, [1, 2, 3, 4, 5, 6]);
     });
 
-    it('should return []', function() {
+    it('should return empty array when parameter is empty array', function() {
       let result = arrayUtils.deepFlatten([]);
       assert.deepStrictEqual(result, []);
     });
@@ -77,7 +77,7 @@ describe('test-arrayUtils', function() {
   });
 
   describe("test 'countOccurrence' function", function() {
-    it('should return 1', function() {
+    it('should return 2', function() {
       const result = arrayUtils.countOccurrence([1, 1, 2], 1);
       assert.strictEqual(result, 2);
     });
